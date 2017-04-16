@@ -1,0 +1,23 @@
+<div class="billerReports">
+    <div>
+        <h1>Upload the {{biller.name}} REPORT</h1>
+        Select a biller: <select id="billerSelection" ng-model="billerSelection">
+        <option>Bridge</option>
+        <option>Capital</option>
+        <option>Duramed</option>
+        <option>MED</option>
+        <option>Medsource</option>
+        <option>Poplarville</option>
+        <option>ProDME</option>
+        <option>RES</option>
+        <option>Symed</option>
+        </select><a href="/#/billerReports/{{billerSelection}}">Submit</a>
+    </div>
+
+    <div>
+        <input type="file" id="billerReport"/>
+        <input type="button" value="Upload Biller Report" ng-click="biller.ReportModelService.buildReport('billerReport', 'Duramed')"/>
+        <br>
+        <input type="button" value="Load" ng-click="biller.ReportModelService.uploadData(0, 'Duramed')"/>
+    </div>
+</div>

@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <style>
+            body {
+               font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+               font-weight: 300;
+                margin:0;
+                padding:0;
+            }
+            h1 {
+                font-size: large;
+            }
+
+            .header {
+                padding: 20px;
+            }
+            .header img {
+                width: 250px;
+            }
+            .header table {
+                width: 100%;
+                text-align: right;
+            }
+            .user {
+                padding: 20px;
+            }
+            .user table {
+                margin: 0px auto;
+                text-align: center;
+            }
+            .user table td {
+                padding: 10px;
+                background-color: lightgray;
+                width: 150px;
+                cursor: pointer;
+            }
+            .user table td:hover {
+                background-color: #386997;
+                color: white;
+            }
+            .totals table {
+                margin: 0px auto;
+            }
+            .totals td {
+                background-color: #052F56;
+                color:white;
+                text-align: center;
+                padding: 20px;
+                border-radius: 5px;
+                border: 2px solid lightgray;
+                font-size: large;
+                cursor: pointer;
+            }
+            .totals td div:last-child {
+                font-size: xx-large;
+            }
+            .totals td div span {
+                font-size: medium;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <table>
+                <tr>
+                    <td><img src="NewLogo.png"/></td>
+                </tr>
+               <tr>
+                    <td><div>March 2017</div></td>
+                </tr>
+            </table>
+
+
+        </div>
+        <hr/>
+        <div class="user">
+            <table>
+                <tr>
+                    <td>Summary Details</td>
+                    <td>Paid Claims Details</td>
+                    <td>Cost of Goods Details</td>
+                </tr>
+            </table>
+        </div>
+        <div class="totals">
+            <table>
+                <tr>
+                    <td>
+                        <div>My Commision Total</div>
+                        <div>$1,200.00 <span>USD</span></div>
+                    </td>
+                    <td>
+                        <div>Paid Amount</div>
+                        <div>$3,200.00 <span>USD</span></div>
+                    </td>
+                    <td>
+                        <div>Cost Of Goods</div>
+                        <div>$2,200.00 <span>USD</span></div>
+                    </td>
+                    <td>
+                        <div>Overrides</div>
+                        <div>$2,200.00 <span>USD</span></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

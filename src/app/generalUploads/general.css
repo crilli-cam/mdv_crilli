@@ -1,0 +1,42 @@
+.generalSection {
+    padding: 30px;
+}
+
+.generalSection .warning {
+    color: darkred;
+}
+
+.generalSection .preview table {
+    text-align: center;
+    margin: 0px auto;
+}
+
+.generalSection div {
+    padding-top: 10px;
+}
+
+.generalSection .choices {
+    max-height: 400px;
+    overflow: auto;
+    position: absolute;
+    z-index: 1000;
+}
+
+.generalSection .choices table {
+    background-color: white;
+    border: 5px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+    text-align: center;
+
+}
+
+.generalSection .choices table td {
+    border-bottom: 1px solid lightgray;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+
+.generalSection .choices table td:hover {
+    background-color: #e8e8e8;
+}

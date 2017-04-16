@@ -1,0 +1,50 @@
+.navi {
+    background-color: #222;
+}
+
+.navi .main {
+    width: 100%;
+    color: white;
+    padding: 10px;
+}
+
+.navi .main td {
+    width: 50%;
+}
+
+.navi .main .title table {
+    float: left;
+    color: white;
+}
+
+.navi .main .title table td:first-child {
+    color: lightgray;
+    font-size: large;
+    padding-right: 20px;
+}
+
+.navi .main .title table td:last-child {
+    color: white;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.navi .main .title a:visited, .navi .main .title a:link, .navi .main .title a:active, .navi .main .title a:hover {
+    color: lightgray;
+    text-decoration: none;
+}
+.navi .main .info table {
+    float: right;
+    color: white;
+}
+
+.navi .main .info table td:first-child {
+    color: lightgray;
+    font-size: medium;
+    padding-right: 5px;
+}
+
+.navi .main .info table td:last-child {
+    color: orange;
+    font-size: small;
+}

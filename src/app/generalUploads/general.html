@@ -1,0 +1,49 @@
+<div class="generalSection">
+    <div>
+        <h1>Insert Into {{gu.name.toUpperCase()}} REPORT</h1>
+    </div>
+
+    <div>
+        <div>Please choose a file location</div>
+        <div class="warning">**Warning - this insert will overwrite your entire file</div>
+        <br/>
+        <br/>
+        <br/>
+        <div>
+            <input type="file" name="xlsxfile" id="fileInput"/>
+            <input type="submit" name="submit" value="Load Data" ng-click="gu.readData()"/>
+        </div>
+        <div class="preview">
+            <div>
+                {{gu.status}}
+            </div>
+            <div>
+                You have successfully loaded a total of {{gu.numberUploaded}} items
+            </div>
+            <div>
+                Preview:
+                <button ng-click="gu.showData()">Preview from Database</button>
+            </div>
+            <table>
+                <tr>
+                    <th ng-repeat="prop in gu.columnNames">{{prop}}</th>
+                </tr>
+                <tr ng-repeat="r in gu.dataRows | limitTo: 20">
+                    <td ng-repeat="prop in gu.columnNames">{{r[prop]}}</td>
+                </tr>
+            </table>
+        </div>
+        <!--
+        <table>
+            <tr>
+                <th ng-repeat="col in gu.columns">{{col}}</th>
+            </tr>
+            <tr ng-repeat="r in gu.rows track by $index">
+                <td ng-repeat="col in gu.columns">
+                    <input type="text" ng-model="r[col]"/>
+                </td>
+            </tr>
+        </table>
+        -->
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="repReport">
+    <div class="header">
+        <table>
+            <tr>
+                <td><img src="../../assets/images/NewLogo.png"/></td>
+            </tr>
+           <tr>
+                <td><div>March 2017</div></td>
+            </tr>
+        </table>
+
+
+    </div>
+    <hr/>
+    <div class="user">
+        <table>
+            <tr>
+                <td>Summary Details</td>
+                <td>Paid Claims Details</td>
+                <td>Cost of Goods Details</td>
+            </tr>
+        </table>
+    </div>
+    <div class="totals">
+        <table>
+            <tr>
+                <td>
+                    <div>My Commision Total</div>
+                    <div>{{rep.commissions | currency}} <span>USD</span></div>
+                </td>
+                <td>
+                    <div>Paid Amount</div>
+                    <div>{{rep.paidTotal | currency}} <span>USD</span></div>
+                </td>
+                <td>
+                    <div>Cost Of Goods</div>
+                    <div>{{rep.cogsTotal | currency}} <span>USD</span></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="view">
+        <table>
+            <tr ng-repeat="r in rep.currView">
+                <td ng-repeat="c in rep.currCols">{{r[c]}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

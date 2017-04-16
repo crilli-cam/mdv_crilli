@@ -1,0 +1,43 @@
+.mainPage {
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.mainPage h1 {
+    font-weight: normal;
+    font-size: medium;
+    display: block;
+}
+
+.mainPage .section {
+    padding: 5px;
+    display: inline-block;
+    margin: 20px auto;
+    float: left;
+}
+
+.mainPage .section .content {
+    display: block;
+}
+
+.mainPage .section .content div {
+    float: left;
+    padding: 20px;
+    color: white;
+    width: 200px;
+    background-color: darkblue;
+    border: 10px solid white;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.mainPage .section .content div:hover {
+    background-color: darkcyan;
+}
+
+.mainPage .section .content div a:link, .mainPage .section .content div a:active, .mainPage .section .content div a:visited, .mainPage .section .content div a:hover {
+    text-decoration: none;
+    color: white;
+    display:inline-block;
+}

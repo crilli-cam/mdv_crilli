@@ -1,0 +1,68 @@
+<div class="generalSection">
+    <div>
+        <h1>Insert Into the BDS REPORT</h1>
+    </div>
+
+    <div>
+        <div class="choices" style="top:{{bds.location.top}}px; left: {{bds.location.left}}px;position:absolute;">
+            <table ng-show="bds.billersClick">
+                <tr ng-repeat="biller in bds.billers | limitTo: bds.limit | filter: {Biller: bds.filter}">
+                    <td>{{biller.Biller}}</td>
+                </tr>
+            </table>
+            <table ng-show="bds.bcbsClick">
+                <tr ng-repeat="bcb in bds.bcbs | limitTo: bds.limit | filter: {BCBSPrefix: bds.filter}">
+                    <td>{{bcb.BCBSPrefix}}</td>
+                </tr>
+            </table>
+            <table ng-show="bds.takehomeClick">
+                <tr ng-repeat="tk in bds.takehome | limitTo: bds.limit | filter: {TakeHomeSerial: bds.filter}">
+                    <td>{{tk.TakeHomeSerial}}</td>
+                </tr>
+            </table>
+            <table ng-show="bds.insurancesClick">
+                <tr ng-repeat="insurance in bds.insurances | limitTo: bds.limit | filter: {Insurance: bds.filter}">
+                    <td>{{insurance.Insurance}}</td>
+                </tr>
+            </table>
+            <table ng-show="bds.repsClick">
+                <tr ng-repeat="rep in bds.reps | limitTo: bds.limit | filter: {Rep: bds.filter}">
+                    <td>{{rep.Rep}}</td>
+                </tr>
+            </table>
+            <table ng-show="bds.facilitiesClick">
+                <tr ng-repeat="facility in bds.facilities | limitTo: bds.limit | filter: {Facility: bds.filter}">
+                    <td>{{facility.Facility}}</td>
+                </tr>
+            </table>
+            <table ng-show="bds.insprefixClick">
+                <tr ng-repeat="ins in bds.insprefix | limitTo: bds.limit | filter: {InsurancePrefix: bds.filter}">
+                    <td>{{ins.InsurancePrefix}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="preview">
+
+            <table>
+                <tr>
+                    <th ng-repeat="prop in bds.columnNames">{{prop}}</th>
+                </tr>
+                <tr ng-repeat="r in bds.dataRows">
+                    <td ng-repeat="prop in bds.columnNames"><input type="text" placeholder="{{prop}}" ng-focus="bds.checkFocus(prop, $event)" ng-change="bds.filter = r[prop]; bds.limit = ((r[prop].length > 0) ? 20000 : 10)" ng-model="r[prop]"/></td>
+                </tr>
+            </table>
+        </div>
+        <!--
+        <table>
+            <tr>
+                <th ng-repeat="col in gu.columns">{{col}}</th>
+            </tr>
+            <tr ng-repeat="r in gu.rows track by $index">
+                <td ng-repeat="col in gu.columns">
+                    <input type="text" ng-model="r[col]"/>
+                </td>
+            </tr>
+        </table>
+        -->
+    </div>
+</div>

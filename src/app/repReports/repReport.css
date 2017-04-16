@@ -1,0 +1,50 @@
+.repReport h1 {
+    font-size: large;
+}
+
+.repReport .header {
+    padding: 20px;
+}
+.repReport .header img {
+    width: 250px;
+}
+.repReport .header table {
+    width: 100%;
+    text-align: right;
+}
+.repReport .user {
+    padding: 20px;
+}
+.repReport .user table {
+    margin: 0px auto;
+    text-align: center;
+}
+.repReport .user table td {
+    padding: 10px;
+    background-color: lightgray;
+    width: 150px;
+    cursor: pointer;
+}
+.repReport .user table td:hover {
+    background-color: #386997;
+    color: white;
+}
+.repReport .totals table {
+    margin: 0px auto;
+}
+.repReport .totals td {
+    background-color: #052F56;
+    color:white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+    font-size: large;
+    cursor: pointer;
+}
+.repReport .totals td div:last-child {
+    font-size: xx-large;
+}
+.repReport .totals td div span {
+    font-size: medium;
+}
